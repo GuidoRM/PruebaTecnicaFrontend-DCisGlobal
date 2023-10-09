@@ -1,0 +1,304 @@
+/*Fonts*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap");
+
+/*General*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Popins", sans-serif;
+  font-style: normal;
+}
+
+.title-section {
+  width: 100%;
+  height: 200px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.title-section .fondo-purpura {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.title-section .logo {
+  width: 250px;
+  position: absolute;
+  top: 5px;
+  left: 4%;
+  z-index: 1;
+}
+
+.title-section .presentacion {
+  width: 90%;
+  margin: 0 auto;
+  height: 100%;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.title-section .presentacion h1 {
+  width: 550px;
+  height: 50%;
+  color: #fff;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.title-section .presentacion img {
+  height: 90%;
+}
+
+.search-section {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.search-section section {
+  width: 50%;
+}
+
+.slider {
+  width: 50%;
+  height: auto;
+  margin: auto;
+  overflow: hidden;
+  background-color: #deebfc;
+  position: relative;
+}
+
+.slider-title {
+  position: absolute;
+  top: calc(100% - 30px);
+  left: 50%;
+  height: 30px;
+  z-index: 123213;
+  color: #fff;
+  font-size: 20px;
+  padding: 0 1rem;
+  font-weight: 600;
+  line-height: normal;
+  background-color: #f9d891;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider .slide-track {
+  display: flex;
+  width: fit-content;
+  animation: scroll-in 40s linear infinite alternate;
+}
+
+.slide-track:hover {
+  animation-play-state: paused; /* Pausa la animación */
+}
+
+.slider .slide {
+  height: 50px;
+  display: flex;
+  text-wrap: nowrap;
+  align-items: center;
+  gap: 1rem;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 1rem;
+}
+
+.slider .slide i {
+  font-size: 20px;
+}
+
+.slider .slide:nth-child(odd) {
+  background-color: #78aceb;
+}
+
+.slider .slide:nth-child(even) {
+  background-color: #a47bd2;
+}
+
+.slider .slide img {
+  width: 100%;
+}
+
+@keyframes scroll-in {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-50%);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.search {
+  padding: 0 2rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search input {
+  width: 100%;
+  height: 70%;
+  border-radius: 2rem;
+  outline: none;
+  border: 2px solid #c595fb;
+  padding: 0 3rem;
+  color: #a97ed9;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.search .icon-search {
+  width: 40px;
+  height: 70%;
+  border-radius: 2rem 0 2rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background: #a97ed9;
+  position: absolute;
+  left: 2rem;
+}
+
+main {
+  width: 90%;
+  margin: 4rem auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  color: white;
+}
+
+main article p {
+  color: #91bff9;
+  font-weight: 600;
+}
+
+main article {
+  background-color: #a97ed9;
+  height: 200px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 1rem;
+  transition: all 0.5s ease-in-out;
+}
+
+main article:hover {
+  background-color: #a459fa;
+  box-shadow: 7px 7px 1px #472371;
+}
+
+main article .skills {
+  display: flex;
+  gap: 0.5rem;
+}
+
+main article a {
+  color: #551a8b;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.5s ease-in-out;
+}
+
+main article a:hover {
+  color: #ffffff;
+}
+
+@media screen and (max-width: 1040px) {
+  .title-section .presentacion h1 {
+    font-size: 25px;
+  }
+  .title-section .presentacion img {
+    height: 75%;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .slider {
+    width: 100%;
+  }
+  .title-section .presentacion {
+    align-items: center;
+    flex-direction: column;
+    padding-top: 7rem;
+  }
+
+  .title-section {
+    height: fit-content;
+  }
+  .slider-title {
+    left: auto;
+  }
+
+  .title-section .presentacion h1 {
+    font-size: 25px;
+    text-align: center;
+    width: 70%;
+  }
+
+  .title-section .presentacion img {
+    height: 75%;
+  }
+
+  .search-section {
+    flex-direction: column-reverse;
+    height: auto;
+  }
+
+  .search-section section {
+    width: 100%;
+    height: 50px;
+  }
+
+  .title-section .presentacion img {
+    height: 150px;
+    object-fit: contain;
+  }
+
+  .search {
+    padding: 0 1rem;
+  }
+
+  .search .icon-search {
+    height: 40px;
+    left: 1rem;
+  }
+  .search input {
+    height: 40px;
+  }
+
+  main {
+    margin: 1rem auto;
+  }
+}
